@@ -13,10 +13,12 @@ time_re = r"(\d{4}-\d{1,2}-\d{1,2}\s\d{1,2}:\d{1,2})"
 num_re = re.compile(u"[0-9]+")
 page_count = 1
 
+# 與資料庫mongodb做連線
 _client = MongoClient()
 _db = _client.eating_project
 _social_network_msg = _db.social_network_msg
 
+# 確認是否在資料庫有無重複
 def check_duplicate_in_mongodb(post_id, post_author, post_title, post_type):
     if _social_network_msg.count({'post_id':post_id, 'post_author':post_author, 'post_title':post_title, 'post_type':post_type}) == 1:
         return True
