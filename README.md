@@ -1,4 +1,4 @@
-# crawler for mobile01
+# Crawler for mobile01
 It's a crawler to crawl the website "mobile01". In my program, you should follow below first:
 <li>Install mongodb in your computer.</li>
 <li>Install Python 3.5</li>
